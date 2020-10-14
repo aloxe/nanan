@@ -1,6 +1,8 @@
+<?php include ("ecrire/top.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php include ("ecrire/head.php"); ?>
 	<meta charset="utf-8">
 	<title>CSS Zen Garden: The Beauty of CSS Design</title>
 
@@ -32,7 +34,7 @@
 	- your browser testing baseline: IE9+, recent Chrome/Firefox/Safari, and iOS/Android
 	- Graceful degradation is acceptable, and in fact highly encouraged.
 	- use classes for styling. Don't use ids.
-	- web fonts are cool, just make sure you have a license to share the files. Hosted 
+	- web fonts are cool, just make sure you have a license to share the files. Hosted
 	  services that are applied via the CSS file (ie. Google Fonts) will work fine, but
 	  most that require custom HTML won't. TypeKit is supported, see the readme on this
 	  page for usage instructions: https://github.com/mezzoblue/csszengarden.com/
@@ -45,10 +47,11 @@
 	- use the Kellum Method for image replacement, if still needed. http://goo.gl/GXxdI
 	- don't rely on the extra divs at the bottom. Use ::before and ::after instead.
 
-		
+
 -->
 
 <body id="css-zen-garden">
+<?php include ("ecrire/body.php"); ?>
 <div class="page-wrapper">
 
 	<section class="intro" id="zen-intro">
@@ -57,12 +60,12 @@
 			<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
 		</header>
 
-		<div class="summary" id="zen-summary" role="article">
+		<div class="summary mutant content-summary" id="zen-summary" role="article">
 			<p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
 			<p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">css file</a></p>
 		</div>
 
-		<div class="preamble" id="zen-preamble" role="article">
+		<div class="preamble mutant content-preambule" id="zen-preamble" role="article">
 			<h3>The Road to Enlightenment</h3>
 			<p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
 			<p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
@@ -70,7 +73,7 @@
 		</div>
 	</section>
 
-	<div class="main supporting" id="zen-supporting" role="main">
+	<div class="main supporting mutant content-participation" id="zen-supporting" role="main">
 		<div class="explanation" id="zen-explanation" role="article">
 			<h3>So What is This About?</h3>
 			<p>There is a continuing need to show the power of <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The <abbr title="HyperText Markup Language">HTML</abbr> remains the same, the only thing that has changed is the external <abbr title="Cascading Style Sheets">CSS</abbr> file. Yes, really.</p>
@@ -189,7 +192,7 @@
 	These superfluous divs/spans were originally provided as catch-alls to add extra imagery.
 	These days we have full ::before and ::after support, favour using those instead.
 	These only remain for historical design compatibility. They might go away one day.
-		
+
 -->
 <div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
 <div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
