@@ -1,19 +1,26 @@
 # nanan
 Update your website directly from the page people see.
 
-This tool is targeted at small websites whose owners don't want to bother with technicalities but still want to update their pages from time to time. The update can only be text with minimal formating on existing part. No database, no backend, no programming languange, no heavy nonsense.
+This tool is targeted at small websites whose owners don't want to bother with technical stuff but still want to update their pages. Only specific text on existing pages can be updated with a few formatting options.
+
+No database,
+no back-end,
+no programming language,
+no heavy nonsense.
 
 #Install
 
 * Make a nice site
-* copy `ecrire` and `memoire` folders from here (yes, the second one is empty)
-* change `memoire`'s permitions to allow writing
-* add specific code to blocks you want to make writtable
+* copy `ecrire` folder to the root of your website
+* create `memoire` folder and make it writable
+* in your pages:
+   * add the class names `"content-NAME mutant"` to the blocks you want to make editable (`NAME` as you want)
+   * add the line `<?php include ("ecrire/papier.php"); ?>` just under the `<body>` tag of the page
 * voilà
 
 #Use
 
-* Go to page
+* Go to page url with `?login`
 * Login
 * Edit
 * Save
