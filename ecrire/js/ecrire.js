@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function setEditor() {
     var path = window.location.pathname;
     var page = path.split("/").pop() !== "" ? path.split("/").pop() : "index";
 
@@ -7,10 +7,6 @@ $(document).ready(function () {
         block.isContentEditable;
         block.contentEditable = true;
     }
-
-    $("#dialog").draggable({
-        handle: ".modal-header"
-    });
 
     $('#savebtn').click(function(){
         var list = document.getElementsByClassName('mutant');
@@ -23,7 +19,7 @@ $(document).ready(function () {
             var successMessage = '<div class="mt-3 alert alert-success alert-dismissible show" role="alert">'+fileName+' enregistré<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>';
 
             $.ajax({
-                url: 'ecrire/save_file.php',
+                url: 'ecrire/buvard.php',
                 type: 'post',
                 async: false,
                 data: {fileName: fileName, content: content },
@@ -39,7 +35,26 @@ $(document).ready(function () {
             });
         }
     });
-});
+}
+
+function closeEditor() {
+            $.ajax({
+                url: 'ecrire/logout.php',
+                type: 'post',
+                data: {log: "off"},
+                datatype: 'json',
+                async: false,
+                cache: false,
+            })
+            .done(function( rsp ) {
+                var response = rsp && JSON.parse(rsp);
+                if (response && response.status === 200) {
+                    $("#dialog").hide();
+                } else {
+                    $(successMessage).html(response.message).removeClass("alert-success").addClass("alert-warning").appendTo( ".modal-body" );
+                }
+            });
+}
 
 function createLink() {
     var url = document.getElementById("url").value;

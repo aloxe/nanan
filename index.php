@@ -1,8 +1,6 @@
-<?php include ("ecrire/top.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php include ("ecrire/head.php"); ?>
 	<meta charset="utf-8">
 	<title>CSS Zen Garden: The Beauty of CSS Design</title>
 
@@ -51,7 +49,7 @@
 -->
 
 <body id="css-zen-garden">
-<?php include ("ecrire/body.php"); ?>
+<?php include ("ecrire/papier.php"); ?>
 <div class="page-wrapper">
 
 	<section class="intro" id="zen-intro">

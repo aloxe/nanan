@@ -12,7 +12,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'memoire/'+fileName+'.json',
             type: 'post',
-            data: 'id=testdata',
+            data: 'id=up',
             datatype: 'json',
             async: false,
             cache: false,
