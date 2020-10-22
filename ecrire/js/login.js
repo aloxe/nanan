@@ -23,7 +23,7 @@ function sendPassword(e) {
             });
             setEditor();
         } else {
-            $(successMessage).html(response.message).removeClass("alert-success").addClass("alert-warning").appendTo( ".modal-body" );
+            $("<div></div>").html(response.message).addClass("alert alert-warning").appendTo(".modal-body form");
         }
     });
 }

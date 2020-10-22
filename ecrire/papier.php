@@ -53,7 +53,7 @@ include ("stylo.php");
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="ecrire/js/content.js" type="text/javascript"></script>
 
-<?php if (isset($_GET['login']) && !isset($_COOKIE['editor']) || $_COOKIE['editor'] != $editor) { ?>
+<?php if (isset($_GET['login']) && !isset($_COOKIE['editor']) || isset($_COOKIE['editor']) && $_COOKIE['editor'] != $editor) { ?>
     <script src="ecrire/js/login.js" type="text/javascript"></script>
     <script src="ecrire/js/ecrire.js" type="text/javascript"></script>
 <?php } ?>
