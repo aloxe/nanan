@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div class="modal-dialog modal-sm" id="dialog" style="position: absolute; z-index: 100; display: none; transition: top 0.3s ease 0s">
+<div class="modal-dialog modal-sm" id="dialog" style="position: absolute; z-index: 100; display: none; transition: top 0.05s linear 0s">
   <div class="modal-content">
         <div class="modal-header" style="cursor: grab;">
             <button type="button" class="close" onClick='return closeEditor()'>×</button>
